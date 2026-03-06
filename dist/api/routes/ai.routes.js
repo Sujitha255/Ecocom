@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const ai_controller_1 = require("../controllers/ai.controller");
+const router = (0, express_1.Router)();
+router.post('/categorize', ai_controller_1.AIController.categorizeProduct);
+router.post('/proposal', ai_controller_1.AIController.generateProposal);
+router.post('/impact', ai_controller_1.AIController.generateImpact);
+router.post('/support', ai_controller_1.AIController.supportBot);
+exports.default = router;
